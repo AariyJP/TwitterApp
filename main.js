@@ -25,22 +25,35 @@ app.on("ready", () =>
     {
     label: 'TwitterApp',
     submenu: 
-    [
-      {
-        label: '現在のURLをコピー',
-        accelerator: process.platform === 'darwin' ? 'Option+C' : 'Alt+C',
-        click: () => { clipboard.writeText(webContents.getURL()); }
-      },
-     {
-       role: 'toggleDevTools',
-        label: '開発者ツールを切り替え'
-     },
-      {
-        label: '終了',
-        role: 'quit'
-      }
-    ]
-  }));
+      [
+        {
+          label: '現在のURLをコピー',
+          accelerator: process.platform === 'darwin' ? 'Option+C' : 'Alt+C',
+          click: () => { clipboard.writeText(webContents.getURL()); }
+        },
+        {
+          label: '拡大',
+          role: 'zoomIn'
+        },
+        {
+          label: '縮小',
+          role: 'zoomOut'
+        },
+        {
+          label: '拡大率をリセット',
+          role: 'resetZoom'
+        },
+        {
+          role: 'toggleDevTools',
+          label: '開発者ツールを切り替え'
+        },
+        {
+          label: '終了',
+          role: 'quit'
+        }
+      ]
+    },
+  ));
   Menu.setApplicationMenu(menu);
 
   rightMenu
