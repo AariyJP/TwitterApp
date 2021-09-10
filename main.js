@@ -8,7 +8,7 @@ app.disableHardwareAcceleration();
 app.on("ready", () =>
 {
   if(process.platform == "darwin")
-    win = new BrowserWindow({show: false, titleBarStyle: 'hiddenInset', width: 688, height: 900});
+    win = new BrowserWindow({show: false, titleBarStyle: 'hiddenInset', width: 688, height: 850});
   else
     win = new BrowserWindow({show: false, titleBarStyle: 'hidden', titleBarOverlay: {color: '#000000', symbolColor: '#FFFFFF'}, width: 893, height: 900});
   win.loadURL(`https://twitter.com`);
@@ -76,16 +76,13 @@ app.on("ready", () =>
   });
   webContents.on('new-window', (event, url) =>
   {
-    if(!url.includes('twitter.com'))
-    {
-      event.preventDefault();
-      electron.shell.openExternal(url);
-    }
+    event.preventDefault();
+    electron.shell.openExternal(url);
   });
 
   webContents.on('page-favicon-updated', () =>
   {
-    webContents.insertCSS('* { font-family: system-ui!important; } ::-webkit-scrollbar { display:none; } .r-1g40b8q { -webkit-app-region: drag!important; } .r-6koalj {-webkit-app-region:no-drag!important;}');
+    webContents.insertCSS('* { font-family: system-ui!important; } ::-webkit-scrollbar { display:none; } .r-1g40b8q { -webkit-app-region: drag!important; user-select: none!important; } .r-6koalj {-webkit-app-region:no-drag!important;}');
     webContents.insertCSS('header {background-color: #222!important; } .r-1vvnge1 { padding-top: 30px!important;');
   });
 
