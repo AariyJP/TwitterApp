@@ -48,6 +48,10 @@ app.on("ready", () =>
           label: '開発者ツールを切り替え'
         },
         {
+          role: 'close',
+          lab,el: '閉じる'
+        },
+        {
           label: '終了',
           role: 'quit'
         }
