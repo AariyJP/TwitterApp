@@ -86,7 +86,7 @@ app.on("ready", () =>
 
   webContents.on('page-favicon-updated', () =>
   {
-    webContents.insertCSS('* { font-family: system-ui!important; } ::-webkit-scrollbar { display:none; } .r-1g40b8q { -webkit-app-region: drag!important; user-select: none!important; } .r-6koalj {-webkit-app-region:no-drag!important;}');
+    webContents.insertCSS('* { font-family: roboto, system-ui!important; } ::-webkit-scrollbar { display:none; } .r-1g40b8q { -webkit-app-region: drag!important; user-select: none!important; } .r-6koalj {-webkit-app-region:no-drag!important;}');
     webContents.insertCSS('header {background-color: #222!important; } .r-1vvnge1 { padding-top: 30px!important;');
   });
 
