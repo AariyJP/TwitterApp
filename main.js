@@ -86,7 +86,7 @@ app.on("ready", () =>
 
   webContents.on('page-favicon-updated', () =>
   {
-    webContents.insertCSS('* { font-family: roboto, system-ui!important; } ::-webkit-scrollbar { display:none; } header, .r-1h3ijdo { -webkit-app-region: drag!important; user-select: none!important; } .r-6koalj, .r-2eszeu {-webkit-app-region:no-drag!important;} .r-1vvnge1 { padding-top: 30px!important;');
+    webContents.insertCSS('* { font-family: roboto, system-ui!important; } ::-webkit-scrollbar { display:none; } header, .r-1h3ijdo { -webkit-app-region: drag!important; user-select: none!important; } .r-6koalj, .r-2eszeu, .r-54znze {-webkit-app-region:no-drag!important;} .r-1vvnge1 { padding-top: 30px!important;');
     if(process.platform != "darwin") webContents.insertCSS(".r-obd0qt.r-s8bhmr { margin-right:130px!important; }")
   });
 
